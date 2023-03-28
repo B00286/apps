@@ -63,3 +63,11 @@ jobs:
 
           kustomize build . > app.yaml
           cat app.yaml
+
+      -name: Comit changes to git OPS
+      run: |
+          git config --local user.email "deploy-bot@stotylabs.dev"
+          git config --local user.name "Storylabs deploy-Bot"
+          git add .
+          git commit -am "New image version, branch: staging, tag: ${{ env.VERSION }}"
+          git push --force origin 
