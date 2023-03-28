@@ -61,6 +61,5 @@ jobs:
           cd public-api/overlays/stage
           kustomize edit set image KUSTOMIZE-DEFINED=${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
 
-        #Optional
           kustomize build . > app.yaml
           cat app.yaml
