@@ -64,8 +64,8 @@ jobs:
           kustomize build . > app.yaml
           cat app.yaml
 
-      -name: Comit changes to git OPS
-      run: |
+      - name: Comit changes to git OPS
+        run: |
           git config --local user.email "deploy-bot@stotylabs.dev"
           git config --local user.name "Storylabs deploy-Bot"
           git add .
