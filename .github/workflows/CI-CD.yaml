@@ -47,9 +47,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: checkout OPS code
-          with:
-            repository: ${{ env.OPS_REPO }}
-            ssh-key: ${{ secrets.OPS_TOKEN }} 
+        with:
+          repository: ${{ env.OPS_REPO }}
+          ssh-key: ${{ secrets.OPS_TOKEN }} 
 
       - name: Setup kustomize
           uses: imranismail/setup-kustomize@v1
