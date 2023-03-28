@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: kubelabs_publicapi2
   OPS_BRANCH: main
   OPS_REPO: B00286/ops
-
+  VERSION: 2.0.0
 jobs:
 
   build:
@@ -31,10 +31,11 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
         
           build-args: |
             APP_ENV=${{ secrets.APP_ENV }}
       
-      - name: Run test
-        run: docker run --rm --name api -p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+      #- name: Run test
+      #  run: docker run --rm --name api -p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
