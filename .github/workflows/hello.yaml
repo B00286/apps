@@ -18,6 +18,6 @@ jobs:
         if: ${{ success() }}
         run: echo "Job succeded!!!"
       
-      - Name: The job has failed?
+      - name: The job has failed?
         if: ${{ failure() }}
         run: echo "Job Failed"
