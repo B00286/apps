@@ -62,5 +62,5 @@ jobs:
           kustomize edit set image KUSTOMIZE-DEFINED=${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
 
         #Optional
-        kustomize build . > app.yaml
-        cat app.yaml
+          kustomize build . > app.yaml
+          cat app.yaml
