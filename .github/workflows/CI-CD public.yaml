@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: kubelabs_publicapi2
   OPS_BRANCH: main
   OPS_REPO: B00286/ops
-  VERSION: 2.0.0
+  VERSION: 3.0.0
 jobs:
 
   build:
