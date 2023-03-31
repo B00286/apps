@@ -1,8 +1,8 @@
 name: Docker Image CI
 
 on:
-  pull_request:
-    branches: [ "main" ]
+  push:
+    branches: [ "stage" ]
 
 env:
   REGISTRY: josemag2209
