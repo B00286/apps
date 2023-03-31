@@ -57,7 +57,7 @@ jobs:
       
       - name: Update Kubernetes resources
         run: |
-          cd public-api/overlays/stage
+          cd public-api/overlays/production
           kustomize edit set image KUSTOMIZE-DEFINED=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
 
           kustomize build . > app.yaml
